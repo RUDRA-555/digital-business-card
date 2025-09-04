@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Web Solutions - Business Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .business-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            max-width: 400px;
+            width: 100%;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+            transition: all 0.3s ease;
+        }
+
+        .business-card:hover {
+            transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+        }
+
+        .business-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .company-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .contact-text {
+            color: #495057;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .linkedin { background: #0077b5; }
+        .twitter { background: #1da1f2; }
+        .github { background: #333; }
+        .website { background: #667eea; }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #667eea, transparent);
+            margin: 25px 0;
+        }
+
+        @media (max-width: 480px) {
+            .business-card {
+                margin: 10px;
+                padding: 30px 20px;
+            }
+            
+            .company-name {
+                font-size: 24px;
+            }
+            
+            .contact-item {
+                font-size: 12px;
+            }
+        }
+
+        .qr-code {
+            width: 80px;
+            height: 80px;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            margin: 20px auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="business-card">
+        <div class="logo">DWS</div>
+        
+        <h1 class="company-name">Rudra Bhatt</h1>
+        <p class="tagline">Web Development Excellence</p>
+        
+        <div class="divider"></div>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">👤</div>
+                <div class="contact-text">Rudra Dhimantbhai Bhatt</div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div class="contact-text">bhattrudra2005@gmail.com</div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div class="contact-text">+91 7984235512</div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">🌐</div>
+                <div class="contact-text">www.rudrabhattcom</div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-text">Rajkot, Gujarat</div>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="social-links">
+            <a href="#" class="social-link linkedin" title="LinkedIn">in</a>
+            <a href="#" class="social-link twitter" title="Twitter">tw</a>
+            <a href="#" class="social-link github" title="GitHub">gh</a>
+            <a href="#" class="social-link website" title="Website">🌐</a>
+        </div>
+        
+       
+    </div>
+</body>
+</html>
